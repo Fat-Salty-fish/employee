@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/consumables?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+    username: root
+    password: LIZHONGJIE199608
+
+  jpa:
+    database: mysql
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+  jackson:
+    time-zone: GMT+8
+
+server:
+  port: 8888
+  tomcat:
+    uri-encoding: utf-8
+
+security:
+  basic:
+    enabled: false
+  user:
+    name: admin
+    password: 123

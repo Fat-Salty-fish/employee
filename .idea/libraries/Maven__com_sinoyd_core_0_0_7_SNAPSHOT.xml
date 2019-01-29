@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.sinoyd:core:0.0.7-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/sinoyd/core/0.0.7-SNAPSHOT/core-0.0.7-20180531.065008-3.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/sinoyd/core/0.0.7-SNAPSHOT/core-0.0.7-20180531.065008-3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/sinoyd/core/0.0.7-SNAPSHOT/core-0.0.7-20180531.065008-3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
