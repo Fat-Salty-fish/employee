@@ -20,13 +20,13 @@ import javax.persistence.Table;
 public class AnalysisProject {
     @Id
     @GeneratedValue
-    private Integer analysisProjectId;
+    private Integer analysisProjectId;      //分析项目id
 
-    private String analysisProjectName;
+    private String analysisProjectName;     //分析项目名
 
-    private String analysisProjectNationalStandard;
+    private String analysisProjectNationalStandard; //分析项目国家标准
 
-    private String analysisProjectMethod;
+    private String analysisProjectMethod;   //分析项目方法
 
-    private String analysisProjectYear;
+    private String analysisProjectYear;     //分析项目年份
 }

@@ -1,7 +1,7 @@
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/consumables?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+    url: jdbc:mysql://localhost:3306/employee?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
     username: root
     password: LIZHONGJIE199608
 
@@ -12,6 +12,7 @@ spring:
     show-sql: false
   jackson:
     time-zone: GMT+8
+    date-format: yyyy-MM-dd
 
 server:
   port: 8888

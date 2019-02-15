@@ -20,11 +20,11 @@ import javax.persistence.Table;
 public class ExamineDetaiProject {
     @Id
     @GeneratedValue
-    private Integer examineProjectId;
+    private Integer examineProjectId;   //考核内容 即分析项目与考核绑定表id
 
-    private Integer examineBaseId;
+    private Integer examineBaseId;      //绑定的考核基础信息id
 
-    private Integer examineDetailId;
+    private Integer examineDetailId;    //绑定的考核详细信息id
 
-    private Integer analysisProjectId;
+    private Integer analysisProjectId;  //绑定的分析项目id
 }

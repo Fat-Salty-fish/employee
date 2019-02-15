@@ -22,73 +22,73 @@ import java.util.Date;
 public class Employee {
     @Id
     @GeneratedValue
-    private Integer employeeId;
+    private Integer employeeId;         //员工id
 
-    private String employeeName;
+    private String employeeName;        //员工姓名 非空
 
-    private String employeeCode;
+    private String employeeCode;        //员工编号 非空
 
-    private String employeeOffice;
+    private String employeeOffice;      //员工办公室 非空
 
-    private String employeeJob;
+    private String employeeJob;         //员工职位 非空
 
-    private String employeeEnglishName;
+    private String employeeEnglishName; //员工英文名
 
-    private Date employeeBirthday;
+    private Date employeeBirthday;      //员工生日 格式；yyyy-MM-dd
 
-    private String  employeeEmail;
+    private String  employeeEmail;      //员工电子邮箱
 
-    private Integer employeeSex;
+    private Integer employeeSex;        //员工性别 0为女性 1为男性
 
-    private String employeeIdNumber;
+    private String employeeIdNumber;    //员工身份证号
 
-    private String employeeNationality;
+    private String employeeNationality; //员工国籍
 
-    private Integer employeeOrderNumber;
+    private Integer employeeOrderNumber;//员工排序值
 
-    private String employeeEducation;
+    private String employeeEducation;   //员工学历
 
-    private String employeeTopEducation;
+    private String employeeTopEducation;//员工最高学历
 
-    private String employeeEducationSchool;
+    private String employeeEducationSchool; //员工毕业学校
 
-    private String employeeMajor;
+    private String employeeMajor;       //员工所学专业
 
-    private Integer employeeMobilePhone;
+    private String employeeMobilePhone; //员工移动电话
 
-    private Integer employeeTelephone;
+    private String employeeTelephone;   //员工固定电话
 
-    private String employeeBirthPlace;
+    private String employeeBirthPlace;  //员工出生地
 
-    private String employeeAddress;
+    private String employeeAddress;     //员工住址
 
-    private String employeeTechnicalTitle;
+    private String employeeTechnicalTitle;  //员工技术职称
 
-    private Date employeeTechnicalTitleGetDate;
+    private Date employeeTechnicalTitleGetDate; //员工技术职称获得时间
 
-    private String employeeTechnicalQualification;
+    private String employeeTechnicalQualification;  //员工技术资格
 
-    private Date employeeTechnicalQualificationGetDate;
+    private Date employeeTechnicalQualificationGetDate; //员工技术资格获得时间
 
-    private String employeeEntryCertificate;
+    private String employeeEntryCertificate;    //员工员工准入证书
 
-    private Date employeeEntryCertificateGetDate;
+    private Date employeeEntryCertificateGetDate;   //员工准入证书获得时间
 
-    private Integer employeeWorkingTime;
+    private Integer employeeWorkingTime;    //在岗时间
 
-    private String employeeCompanyEmail;
+    private String employeeCompanyEmail;    //员工公司邮箱
 
-    private Date employeeEntryDate;
+    private Date employeeEntryDate;         //员工入职日期 格式：yyyy-MM-dd
 
-    private Date employeeStartWorkingDate;
+    private Date employeeStartWorkingDate;  //员工开始工作日期 格式：yyyy-MM-dd
 
-    private Date employeeDimissionDate;
+    private Date employeeDimissionDate;     //员工离职时间 格式：yyyy-MM-dd
 
-    private Date employeeJoinPartyDate;
+    private Date employeeJoinPartyDate;     //员工入党时间 格式：yyyy-MM-dd
 
-    private Integer employeeImportantPosition;
+    private Integer employeeImportantPosition;  //员工关键岗位 复选框
 
-    private String employeeTechnicalAbility;
+    private String employeeTechnicalAbility;    //员工技术能力
 
-    private String employeeRemark;
+    private String employeeRemark;              //员工备注
 }

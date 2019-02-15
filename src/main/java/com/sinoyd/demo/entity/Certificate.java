@@ -22,21 +22,21 @@ import java.util.Date;
 public class Certificate {
     @Id
     @GeneratedValue
-    private Integer certificateId;
+    private Integer certificateId;      //证书id
 
-    private String certificateCode;
+    private String certificateCode;     //证书边海
 
-    private String certificateName;
+    private String certificateName;     //证书名称
 
-    private Date certificateDate;
+    private Date certificateDate;       //证书颁布日期    格式：yyyy-MM=-dd
 
-    private Date certificateValidity;
+    private Date certificateValidity;      //证书有效日期 格式：yyyy-MM-dd
 
-    private Integer employeeId;
+    private Integer employeeId;         //证书所属的员工id
 
-    private Integer examineBaseId;
+    private Integer examineBaseId;      //绑定的基础考核信息id
 
-    private Integer examineDetailId;
+    private Integer examineDetailId;    //绑定的详细考核信息id
 
-    private String examineRemark;
+    private String examineRemark;       //考核备注
 }

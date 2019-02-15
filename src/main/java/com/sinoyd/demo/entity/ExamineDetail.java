@@ -21,11 +21,11 @@ import java.util.Date;
 public class ExamineDetail {
     @Id
     @GeneratedValue
-    private Integer examineDetailId;
+    private Integer examineDetailId;    //考核详情id 考核详情理解为考核批次
 
-    private Integer examineBaseId;
+    private Integer examineBaseId;      //考核批次绑定的考核基础信息id
 
-    private Date examineDate;
+    private Date examineDate;           //考核时间
 
-    private String examineCode;
+    private String examineCode;         //考核编号
 }

@@ -20,23 +20,23 @@ import javax.persistence.Table;
 public class ExamineBase {
     @Id
     @GeneratedValue
-    private Integer examineBaseId;
+    private Integer examineBaseId;      //考核基础信息id
 
-    private String examineProjectName;
+    private String examineProjectName;  //考核名称 理解为证书名称
 
-    private String examineCompany;
+    private String examineCompany;      //考核公司
 
-    private String examineContent;
+    private String examineContent;      //考核内容
 
-    private String examineType;
+    private String examineType;         //考核类型
 
-    private String examineTeacher;
+    private String examineTeacher;      //考核人、讲师
 
-    private String examineRecordPerson;
+    private String examineRecordPerson; //考核记录人
 
-    private Integer examineLearningTime;
+    private Integer examineLearningTime;//考核学时
 
-    private String examineCertificateType;
+    private String examineCertificateType;//考核证书类型
 
-    private String examineRemark;
+    private String examineRemark;   //考核备注
 }
