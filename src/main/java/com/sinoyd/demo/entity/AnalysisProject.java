@@ -29,4 +29,11 @@ public class AnalysisProject {
     private String analysisProjectMethod;   //分析项目方法
 
     private String analysisProjectYear;     //分析项目年份
+
+    private String analysisProjectSpecimenType;     //分析项目样品类型
+
+    private Integer isDivided;              //是否分包 1为是 0为否
+
+    private Integer isLocal;                //是否现场 1为是 0为否
+
 }

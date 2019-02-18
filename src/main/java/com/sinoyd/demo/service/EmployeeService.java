@@ -9,10 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 /**
  * @Description 员工信息操作Service层 用于对员工数据进行处理
@@ -27,46 +24,44 @@ public class EmployeeService {
     @Autowired
     private CommonRepository commonRepository;
 
-    public Map findByPage(PageBean pageBean , BaseCriteria employeeCriteria){
+    public Map findByPage(PageBean pageBean, BaseCriteria employeeCriteria) {
         pageBean.setEntityName("Employee a ");
         pageBean.setSelect("Select a ");
-        commonRepository.findByPage(pageBean,employeeCriteria);
-        Map<String,Object> data = new HashMap<>();
-        data.put("page",pageBean.getPageNo());
-        data.put("rows",pageBean.getData());
-        data.put("total",pageBean.getRowsCount());
-        return data;
+        commonRepository.findByPage(pageBean, employeeCriteria);
+        List<Employee> employees = pageBean.getData();
+        employees.forEach(Employee::intToArray);
+        pageBean.setData(employees);
+        return ServiceTools.setMapFormat(pageBean);
     }
 
-    public Map findById(Integer id){
+    public Map findById(Integer id) {
         Employee employee = employeeRepository.findOne(id);
-        Map<String,Object> data = new HashMap<>();
-        data.put("employee",employee);
-        return data;
+        employee.intToArray();
+        return ServiceTools.setMapFormat("employee", employee);
     }
 
-    public void save(Employee employee){
+    public void save(Employee employee) {
+        employee.arrayToInt();
         employeeRepository.save(employee);
     }
 
-    public Map check(String employeeCode){
+    public Map check(String employeeCode) {
         Boolean check = Optional.ofNullable(employeeRepository.findByEmployeeCode(employeeCode)).isPresent();
-        Map data = new HashMap();
-        data.put("exist",check);
-        return data;
+        return ServiceTools.setMapFormat("exist", check);
     }
 
     @Transactional
-    public Map delete(Collection<Integer> ids){
-        Integer deleteNum = employeeRepository.deleteAllByEmployeeId(ids);
-        Map data = new HashMap();
-        data.put("deleteNumber",deleteNum);
-        return data;
+    public Map delete(Collection<Integer> ids) {
+        Integer deleteNum = employeeRepository.deleteByEmployeeIdIn(ids);
+        return ServiceTools.setMapFormat("deleteNumber", deleteNum);
     }
 
     @Transactional
-    public void update(Employee employee){
+    public void update(Employee employee) {
+        if (employee.getEmployeeId() == null) {
+            throw new NullPointerException("员工id为空!");
+        }
+        employee.arrayToInt();
         employeeRepository.save(employee);
     }
-
 }

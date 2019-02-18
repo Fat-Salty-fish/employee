@@ -14,6 +14,7 @@ import lombok.Setter;
 @Setter
 public class EmployeeCriteria extends BaseCriteria {
     private String employeeName;
+    private String employeeCode;
 
     @Override
     public String getCondition() {
@@ -22,6 +23,10 @@ public class EmployeeCriteria extends BaseCriteria {
         if (StringUtils.isNotNullAndEmpty(this.employeeName)) {
             condition.append(" and employeeName like :employeeName ");
             this.values.put("employeeName", "%" + this.employeeName + "%");
+        }
+        if (StringUtils.isNotNullAndEmpty(this.employeeCode)) {
+            condition.append(" and employeeCode like :employeeCode");
+            this.values.put("employeeCode", "%" + this.employeeCode + "%");
         }
         return condition.toString();
     }

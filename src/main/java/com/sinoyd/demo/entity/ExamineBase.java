@@ -39,4 +39,6 @@ public class ExamineBase {
     private String examineCertificateType;//考核证书类型
 
     private String examineRemark;   //考核备注
+
+    private Integer isDeleted;      //是否删除标记 0为未删除 1为已删除
 }

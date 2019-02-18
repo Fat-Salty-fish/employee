@@ -17,7 +17,6 @@ import java.util.Map;
 public class ResultBean<K, V> {
     private Integer code;
     private String message;
-    //    private Collection<T> data;
     private Map<K, V> data;
 
     public ResultBean() {

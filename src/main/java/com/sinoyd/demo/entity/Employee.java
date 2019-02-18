@@ -3,11 +3,10 @@ package com.sinoyd.demo.entity;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @Description 公司员工信息表
@@ -36,7 +35,7 @@ public class Employee {
 
     private Date employeeBirthday;      //员工生日 格式；yyyy-MM-dd
 
-    private String  employeeEmail;      //员工电子邮箱
+    private String employeeEmail;      //员工电子邮箱
 
     private Integer employeeSex;        //员工性别 0为女性 1为男性
 
@@ -86,9 +85,35 @@ public class Employee {
 
     private Date employeeJoinPartyDate;     //员工入党时间 格式：yyyy-MM-dd
 
-    private Integer employeeImportantPosition;  //员工关键岗位 复选框
+    @Transient
+    private List<Integer> employeeImportantPosition;  //员工关键岗位 复选框
 
     private String employeeTechnicalAbility;    //员工技术能力
 
     private String employeeRemark;              //员工备注
+
+    private Integer employeeImportantPositionInt;   //员工关键岗位折算为数字储存在数据库中
+
+    public void intToArray() {                  //将数字转换为数组
+        if (employeeImportantPositionInt != null) {
+            employeeImportantPosition = new ArrayList<>();
+            for (int i = 1; i < 16; i++) {
+                Integer check = employeeImportantPositionInt & (int) Math.pow(2, i);
+                if (!check.equals(0)) {
+                    employeeImportantPosition.add(i);
+                }
+            }
+        }
+    }
+
+    public void arrayToInt() {                  //将数组转换为数字
+        if (employeeImportantPosition != null && employeeImportantPosition.size() != 0) {
+            employeeImportantPositionInt = 0;
+            for (int i = 0; i < employeeImportantPosition.size(); i++) {
+                employeeImportantPositionInt += (int) Math.pow(2, employeeImportantPosition.get(i));
+            }
+        }
+    }
 }
+
+

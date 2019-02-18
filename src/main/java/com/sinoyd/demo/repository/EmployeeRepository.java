@@ -10,7 +10,7 @@ import java.util.Collection;
  * @auther 李忠杰
  * @create 2019-01-28 16:50
  */
-public interface EmployeeRepository extends CrudRepository<Employee,Integer> {
-    Integer deleteAllByEmployeeId(Collection<Integer> ids);
-    Employee findByEmployeeCode(String empcloyeeCode);
+public interface EmployeeRepository extends CrudRepository<Employee,Integer>{
+    Integer deleteByEmployeeIdIn(Collection<Integer> ids);
+    Employee findByEmployeeCode(String employeeCode);
 }
