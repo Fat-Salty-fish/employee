@@ -14,7 +14,6 @@ import lombok.Setter;
 @Getter
 public class AnalysisProjectCriteria extends BaseCriteria {
     private String analysisProjectName;
-
     private String analysisProjectSpecimenType;
 
     @Override

@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.Date;
 
 /**
  * @Description
@@ -20,25 +21,27 @@ import javax.persistence.Table;
 public class ExamineBase {
     @Id
     @GeneratedValue
-    private Integer examineBaseId;      //考核基础信息id
+    private Integer examineBaseId;          //考核基础信息id
 
-    private String examineProjectName;  //考核名称 理解为证书名称
+    private String examineName;             //考核名称 理解为证书名称
 
-    private String examineCompany;      //考核公司
+    private String examineCompany;          //考核公司
 
-    private String examineContent;      //考核内容
+    private String examineContent;          //考核内容
 
-    private String examineType;         //考核类型
+    private String examineType;             //考核类型
 
-    private String examineTeacher;      //考核人、讲师
+    private String examineTeacher;          //考核人、讲师
 
-    private String examineRecordPerson; //考核记录人
+    private Date examineCreateDate;         //考核项目创立时间
 
-    private Integer examineLearningTime;//考核学时
+    private String examineRecordPerson;     //考核记录人
 
-    private String examineCertificateType;//考核证书类型
+    private Integer examineLearningTime;    //考核学时
 
-    private String examineRemark;   //考核备注
+    private String examineCertificateType;  //考核证书类型
 
-    private Integer isDeleted;      //是否删除标记 0为未删除 1为已删除
+    private String examineRemark;           //考核备注
+
+    private Integer isDeleted = 0;              //是否删除标记 0为未删除 1为已删除
 }

@@ -17,7 +17,7 @@ import javax.persistence.Table;
 @Table(name = "t_examine_detail_project_info")
 @Getter
 @Setter
-public class ExamineDetaiProject {
+public class ExamineDetailProject {
     @Id
     @GeneratedValue
     private Integer examineProjectId;   //考核内容 即分析项目与考核绑定表id

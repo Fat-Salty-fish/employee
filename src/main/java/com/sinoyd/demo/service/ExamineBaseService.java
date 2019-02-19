@@ -10,9 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-import java.beans.Transient;
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -22,34 +20,31 @@ import java.util.Map;
  * @create 2019-02-15 17:06
  */
 @Service
-public class ExamineService {
+public class ExamineBaseService {
     @Autowired
     private ExamineBaseRepository examineBaseRepository;
 
     @Autowired
-    private ExamineDetailRepository examineDetailRepository;
-
-    @Autowired
     private CommonRepository commonRepository;
 
-    public void examineBaseCreate(ExamineBase examineBase){
+    public void create(ExamineBase examineBase){
         examineBaseRepository.save(examineBase);
     }
 
-    public Map examineBaseFindByPage(PageBean pageBean, BaseCriteria examineBaseCriertia){
+    public Map findByPage(PageBean pageBean, BaseCriteria examineBaseCriertia){
         pageBean.setEntityName("ExamineBase a");
         pageBean.setSelect("Select a");
         commonRepository.findByPage(pageBean,examineBaseCriertia);
         return ServiceTools.setMapFormat(pageBean);
     }
 
-    public Map examineBaseFindById(Integer id){
+    public Map findById(Integer id){
         ExamineBase examineBase = examineBaseRepository.findOne(id);
         return ServiceTools.setMapFormat("examineBase",examineBase);
     }
 
     @Transactional
-    public Map examineBaseDelete(Collection<Integer> ids){
+    public Map delete(Collection<Integer> ids){
         List<ExamineBase> examineBases = examineBaseRepository.findByExamineBaseIdIn(ids);
         Integer deleteNum = (int)examineBases.stream().filter(examineBase -> examineBase.getIsDeleted()==0).peek(examineBase -> examineBase.setIsDeleted(1)).count();
         examineBaseRepository.save(examineBases);
@@ -57,7 +52,7 @@ public class ExamineService {
     }
 
     @Transactional
-    public void examineBaseUpdate(ExamineBase examineBase){
+    public void update(ExamineBase examineBase){
         if(examineBase.getExamineBaseId() == null){
             throw new NullPointerException("考核id为空!");
         }

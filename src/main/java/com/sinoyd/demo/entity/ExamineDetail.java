@@ -3,10 +3,7 @@ package com.sinoyd.demo.entity;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 /**
@@ -28,4 +25,10 @@ public class ExamineDetail {
     private Date examineDate;           //考核时间
 
     private String examineCode;         //考核编号
+
+    @Transient
+    private Integer totalTestProject;   //返回的测试项目总数
+
+    @Transient
+    private Integer totalPeople;        //返回的考核员工总数
 }
