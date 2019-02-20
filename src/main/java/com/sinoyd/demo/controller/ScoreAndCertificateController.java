@@ -18,5 +18,8 @@ public class ScoreAndCertificateController {
     private ScoreAndCertificateService scoreAndCertificateService;
 
     @GetMapping("")
-    public Object findScoreByExamineBaseId(){return null;}
+    public Object findScoreByExamineBaseId() {
+        return null;
+    }
+
 }

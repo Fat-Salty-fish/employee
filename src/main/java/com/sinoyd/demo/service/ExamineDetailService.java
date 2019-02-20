@@ -111,7 +111,7 @@ public class ExamineDetailService {
 
         List<Integer> existingAnalysisProjectIds = examineDetailProjectRepository.findByExamineDetailId(examineDetailId).stream().map(project -> project.getAnalysisProjectId()).collect(Collectors.toList());
 
-        List<Integer> analysisProjectIds = args.getData();
+        List<Integer> analysisProjectIds = args.getData().stream().filter(id->!existingAnalysisProjectIds.contains(id)).collect(Collectors.toList());
 
         List<ExamineDetailProject> projectList = analysisProjectIds.stream().
                 map(temp -> {
@@ -132,7 +132,10 @@ public class ExamineDetailService {
         }
 
         Integer examineBaseId = args.getExamineBaseId();
-        List<Integer> employeeIds = args.getData();
+
+        List<Integer> existingEmployeeIds = examineDetailEmployeeAndScoreInfoRepository.findByExamineDetailId(examineDetailId).stream().map(employeeRecord->employeeRecord.getEmployeeId()).collect(Collectors.toList());
+
+        List<Integer> employeeIds = args.getData().stream().filter(id->!existingEmployeeIds.contains(id)).collect(Collectors.toList());
 
         List<ExamineDetailEmployeeAndScoreInfo> employeeInfos = employeeIds.stream()
                 .map(temp -> {
