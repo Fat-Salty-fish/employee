@@ -13,4 +13,6 @@ import java.util.List;
  */
 public interface ExamineDetailProjectRepository extends CrudRepository<ExamineDetailProject,Integer> {
     List<ExamineDetailProject> findByExamineDetailIdIn(Collection<Integer> examineDetailIds);
+    List<ExamineDetailProject> findByExamineDetailId(Integer examineDetail);
+    Integer deleteByExamineProjectIdIn(Collection<Integer> examineDetailProjectIds);
 }

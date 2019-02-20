@@ -13,4 +13,5 @@ import java.util.List;
  */
 public interface ExamineDetailEmployeeAndScoreInfoRepository extends CrudRepository<ExamineDetailEmployeeAndScoreInfo,Integer> {
     List<ExamineDetailEmployeeAndScoreInfo> findByExamineDetailIdIn(Collection<Integer> examineDetailIds);
+    Integer deleteByExamineEmployeeIdIn(Collection<Integer> examineDetailEmployeeRecordIds);
 }

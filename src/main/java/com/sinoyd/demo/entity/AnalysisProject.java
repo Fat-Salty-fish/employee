@@ -35,5 +35,4 @@ public class AnalysisProject {
     private Integer isDivided;              //是否分包 1为是 0为否
 
     private Integer isLocal;                //是否现场 1为是 0为否
-
 }

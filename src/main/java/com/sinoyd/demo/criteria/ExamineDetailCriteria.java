@@ -14,14 +14,19 @@ import lombok.Setter;
 @Setter
 public class ExamineDetailCriteria extends BaseCriteria {
     private Integer examineBaseId;
+    private Integer examineDetailId ;
 
     @Override
     public String getCondition() {
         values.clear();
         StringBuilder condition = new StringBuilder();
         if(StringUtils.isNotNullAndEmpty(this.examineBaseId)){
-            condition.append(" and examineBaseId = :examineBaseId");
+            condition.append(" and examineBaseId = :examineBaseId ");
             values.put("examineBaseId",this.examineBaseId);
+        }
+        if(StringUtils.isNotNullAndEmpty(this.examineDetailId)){
+            condition.append(" and examineDetailId = :examineDetailId ");
+            values.put("examineDetailId",this.examineDetailId);
         }
         return condition.toString();
     }

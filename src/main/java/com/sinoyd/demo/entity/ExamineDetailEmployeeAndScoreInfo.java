@@ -3,10 +3,7 @@ package com.sinoyd.demo.entity;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * @Description
@@ -38,7 +35,10 @@ public class ExamineDetailEmployeeAndScoreInfo {
 
     private String examineCommentPerson;    //考核评审人
 
-    private Integer examineIsPassed;    //是否通过 0为不通过 1为通过
+    private Integer examineIsPassed ;    //是否通过 0为不通过 1为通过
 
-    private Integer examineIsGetCertificate;    //考核是否发证 0为未发证 1为发证
+    private Integer examineIsGetCertificate ;    //考核是否发证 0为未发证 1为发证
+
+    @Transient
+    private Employee employee;          //绑定下的员工信息 用于展示给前端
 }

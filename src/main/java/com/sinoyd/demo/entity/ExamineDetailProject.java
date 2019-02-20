@@ -3,10 +3,7 @@ package com.sinoyd.demo.entity;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * @Description
@@ -27,4 +24,8 @@ public class ExamineDetailProject {
     private Integer examineDetailId;    //绑定的考核详细信息id
 
     private Integer analysisProjectId;  //绑定的分析项目id
+
+    @Transient
+    private AnalysisProject analysisProject; //分析项目 每个绑定下面必定对应一个分析项目
+
 }

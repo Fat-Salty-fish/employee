@@ -26,6 +26,11 @@ public class ExamineDetail {
 
     private String examineCode;         //考核编号
 
+    private Integer isScored = 0;       //状态 判断考核批次是否已经给过分了 0为未给分 1为已给分
+                                        //在给过分之后 对应批次的人员和分析项目不能再被修改
+
+//    private Integer isCertificated;     //状态 判断考核批次是否已经发过证了
+
     @Transient
     private Integer totalTestProject;   //返回的测试项目总数
 

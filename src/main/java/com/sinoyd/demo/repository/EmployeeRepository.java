@@ -4,6 +4,7 @@ import com.sinoyd.demo.entity.Employee;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.Collection;
+import java.util.List;
 
 /**
  * @Description
@@ -13,4 +14,5 @@ import java.util.Collection;
 public interface EmployeeRepository extends CrudRepository<Employee,Integer>{
     Integer deleteByEmployeeIdIn(Collection<Integer> ids);
     Employee findByEmployeeCode(String employeeCode);
+    List<Employee> findByEmployeeIdIn(Collection<Integer> employeeIds);
 }
