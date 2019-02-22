@@ -2,6 +2,7 @@ package com.sinoyd.demo.criteria;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.sinoyd.frame.base.util.BaseCriteria;
+import com.sinoyd.frame.base.util.DateUtil;
 import com.sinoyd.frame.base.util.StringUtils;
 import lombok.Data;
 import lombok.Getter;
@@ -55,7 +56,7 @@ public class ExamineBaseCriteria extends BaseCriteria {
         return condition.toString();
     }
 
-    public ExamineBaseCriteria(String examineName, String examineType, String startDate, String endDate, Integer isDeleted) throws ParseException {
+    public ExamineBaseCriteria(String examineName, String examineType, String startDate, String endDate, Integer isDeleted)   {
         if (StringUtils.isNotNullAndEmpty(examineName)) {
             this.examineName = examineName;
         }
@@ -64,10 +65,14 @@ public class ExamineBaseCriteria extends BaseCriteria {
         }
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         if (StringUtils.isNotNullAndEmpty(startDate)) {
-            this.startDate = dateFormat.parse(startDate);
+            try {
+                this.startDate = dateFormat.parse(startDate);
+            } catch (ParseException ignored) {
+
+            }
         }
         if (StringUtils.isNotNullAndEmpty(endDate)) {
-            this.endDate = dateFormat.parse(endDate);
+            this.endDate = DateUtil.stringToDate(endDate,"yyyy-MM-dd");
         }
         if (isDeleted != null) {
             this.isDeleted = isDeleted;

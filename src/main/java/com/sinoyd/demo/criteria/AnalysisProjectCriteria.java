@@ -20,14 +20,16 @@ public class AnalysisProjectCriteria extends BaseCriteria {
     public String getCondition() {
         this.values.clear();
         StringBuilder condition = new StringBuilder();
+
         if (StringUtils.isNotNullAndEmpty(this.analysisProjectName)) {
             condition.append(" and analysisProjectName like :analysisProjectName");
             this.values.put("analysisProjectName", "%" + this.analysisProjectName + "%");
         }
         if (StringUtils.isNotNullAndEmpty(this.analysisProjectSpecimenType)) {
-            condition.append(" and analysisProjectSpecimenType like :analysisProjectSpecimenType ");
+            condition.append(" and analysisProjectSpecimenType = :analysisProjectSpecimenType ");
             this.values.put("analysisProjectSpecimenType", "%" + this.analysisProjectSpecimenType + "%");
         }
+
         return condition.toString();
     }
 }

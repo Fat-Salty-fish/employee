@@ -69,11 +69,19 @@ public class ExamineDetailService {
         commonRepository.findByPage(pageBean, examineDetailCriteria);
 
         List<ExamineDetailProject> examineDetailProjects = pageBean.getData();
-        List<Integer> analysisProjectIds = examineDetailProjects.stream().map(project -> project.getAnalysisProjectId()).distinct().collect(Collectors.toList());
+        List<Integer> analysisProjectIds = examineDetailProjects
+                .stream()
+                .map(project -> project.getAnalysisProjectId())
+                .distinct()
+                .collect(Collectors.toList());
         List<AnalysisProject> analysisProjects = analysisProjectRepository.findByAnalysisProjectIdIn(analysisProjectIds).stream().collect(Collectors.toList());
 
         examineDetailProjects.forEach(project ->
-                project.setAnalysisProject(analysisProjects.stream().filter(analysisProject -> analysisProject.getAnalysisProjectId().equals(project.getAnalysisProjectId())).findAny().orElse(null)));
+                project.setAnalysisProject(analysisProjects
+                        .stream()
+                        .filter(analysisProject -> analysisProject.getAnalysisProjectId().equals(project.getAnalysisProjectId()))
+                        .findAny()
+                        .orElse(null)));
 //        pageBean.setData(examineDetailProjects);
         return ServiceTools.setMapFormat(pageBean);
     }
@@ -91,7 +99,11 @@ public class ExamineDetailService {
         List<Employee> employees = employeeRepository.findByEmployeeIdIn(employeeIds);
 
         employeeRecords.forEach(record ->
-                record.setEmployee(employees.stream().filter(employee -> record.getEmployeeId().equals(employee.getEmployeeId())).findAny().orElse(null)));
+                record.setEmployee(employees
+                        .stream()
+                        .filter(employee -> record.getEmployeeId().equals(employee.getEmployeeId()))
+                        .findAny()
+                        .orElse(null)));
 //        pageBean.setData(employeeRecords);
         return ServiceTools.setMapFormat(pageBean);
     }
@@ -111,7 +123,7 @@ public class ExamineDetailService {
 
         List<Integer> existingAnalysisProjectIds = examineDetailProjectRepository.findByExamineDetailId(examineDetailId).stream().map(project -> project.getAnalysisProjectId()).collect(Collectors.toList());
 
-        List<Integer> analysisProjectIds = args.getData().stream().filter(id->!existingAnalysisProjectIds.contains(id)).collect(Collectors.toList());
+        List<Integer> analysisProjectIds = args.getData().stream().filter(id -> !existingAnalysisProjectIds.contains(id)).collect(Collectors.toList());
 
         List<ExamineDetailProject> projectList = analysisProjectIds.stream().
                 map(temp -> {
@@ -124,20 +136,34 @@ public class ExamineDetailService {
         examineDetailProjectRepository.save(projectList);
     }
 
-    public void createEmployeeRecord(ExamineDetailParameter args) {
+    public Map createEmployeeRecord(ExamineDetailParameter args) {
         args.checkNull();
         Integer examineDetailId = args.getExamineDetailId();
         if (Integer.valueOf(1).equals(examineDetailRepository.findOne(examineDetailId).getIsScored())) {
             throw new IllegalArgumentException("此次考核已经给分 无法添加新的考核人员");
         }
+        StringBuilder addResult = new StringBuilder();
 
         Integer examineBaseId = args.getExamineBaseId();
+        List<Employee> employees = employeeRepository.findByEmployeeIdIn(args.getData());
 
-        List<Integer> existingEmployeeIds = examineDetailEmployeeAndScoreInfoRepository.findByExamineDetailId(examineDetailId).stream().map(employeeRecord->employeeRecord.getEmployeeId()).collect(Collectors.toList());
+        List<Integer> existingEmployeeIds = examineDetailEmployeeAndScoreInfoRepository.findByExamineBaseId(examineBaseId).stream().map(employeeRecord -> employeeRecord.getEmployeeId()).collect(Collectors.toList());
 
-        List<Integer> employeeIds = args.getData().stream().filter(id->!existingEmployeeIds.contains(id)).collect(Collectors.toList());
+        List<Integer> distinctIds = args.getData().stream().filter(id -> existingEmployeeIds.contains(id)).collect(Collectors.toList());
+        if (distinctIds != null && distinctIds.size() > 0) {
+            addResult.append("人员:");
+            employees.stream().filter(employee -> distinctIds.contains(employee.getEmployeeId())).forEach(employee -> addResult.append(" " + employee.getEmployeeName() + " "));
+            addResult.append("已存在于本考核中 无法重复添加" + "\n");
+        }
 
-        List<ExamineDetailEmployeeAndScoreInfo> employeeInfos = employeeIds.stream()
+        List<Integer> employeeToSaveIds = args.getData().stream().filter(id -> !existingEmployeeIds.contains(id)).collect(Collectors.toList());
+
+        if (employeeToSaveIds != null && employeeToSaveIds.size() > 0) {
+            addResult.append("人员:");
+            employees.stream().filter(employee -> employeeToSaveIds.contains(employee.getEmployeeId())).forEach(employee -> addResult.append(" " + employee.getEmployeeName() + " "));
+            addResult.append("考核添加成功");
+        }
+        List<ExamineDetailEmployeeAndScoreInfo> employeeInfos = employeeToSaveIds.stream()
                 .map(temp -> {
                     ExamineDetailEmployeeAndScoreInfo info = new ExamineDetailEmployeeAndScoreInfo();
                     info.setExamineDetailId(examineDetailId);
@@ -146,6 +172,7 @@ public class ExamineDetailService {
                     return info;
                 }).collect(Collectors.toList());
         examineDetailEmployeeAndScoreInfoRepository.save(employeeInfos);
+        return ServiceTools.setMapFormat("addResult",addResult.toString());
     }
 
     @Transactional

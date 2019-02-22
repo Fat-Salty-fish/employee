@@ -17,7 +17,7 @@ import javax.persistence.*;
 public class ExamineDetailEmployeeAndScoreInfo {
     @Id
     @GeneratedValue
-    private Integer examineEmployeeId;  //员工考核id 理解为考核成绩
+    private Integer examineEmployeeId;  //员工考核id
 
     private Integer examineBaseId;      //对应的考核基础信息id（证书）
 
@@ -41,4 +41,7 @@ public class ExamineDetailEmployeeAndScoreInfo {
 
     @Transient
     private Employee employee;          //绑定下的员工信息 用于展示给前端
+
+    @Transient
+    private String certificateCode;     //证书编号 用于前端展示
 }

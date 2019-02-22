@@ -30,7 +30,9 @@ public class EmployeeService {
         commonRepository.findByPage(pageBean, employeeCriteria);
         List<Employee> employees = pageBean.getData();
         employees.forEach(Employee::intToArray);
+
         pageBean.setData(employees);
+
         return ServiceTools.setMapFormat(pageBean);
     }
 
@@ -60,6 +62,18 @@ public class EmployeeService {
     public void update(Employee employee) {
         if (employee.getEmployeeId() == null) {
             throw new NullPointerException("员工id为空!");
+        }
+        if (employee.getEmployeeName() == null) {
+            throw new NullPointerException("员工姓名为空!");
+        }
+        if (employee.getEmployeeCode() == null) {
+            throw new NullPointerException("员工编号为空!");
+        }
+        if (employee.getEmployeeOffice() == null) {
+            throw new NullPointerException("员工办公室为空!");
+        }
+        if (employee.getEmployeeJob() == null) {
+            throw new NullPointerException("员工工作岗位为空!");
         }
         employee.arrayToInt();
         employeeRepository.save(employee);

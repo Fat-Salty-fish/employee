@@ -13,6 +13,10 @@ import java.util.List;
  */
 public interface EmployeeRepository extends CrudRepository<Employee,Integer>{
     Integer deleteByEmployeeIdIn(Collection<Integer> ids);
+
     Employee findByEmployeeCode(String employeeCode);
+
     List<Employee> findByEmployeeIdIn(Collection<Integer> employeeIds);
+
+    List<Employee> findByEmployeeNameLike(String employeeName);
 }

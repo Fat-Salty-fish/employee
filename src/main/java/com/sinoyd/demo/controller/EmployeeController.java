@@ -13,7 +13,7 @@ import java.util.Collection;
 
 
 /**
- * @Description
+ * @Description 员工管理controller类 响应与员工有关的操作
  * @auther 李忠杰
  * @create 2019-01-28 16:51
  */
@@ -25,7 +25,8 @@ public class EmployeeController extends BaseController {
 
     /**
      * 员工信息 分页搜索和模糊搜索
-     * @param employeeCriteria
+     *
+     * @param employeeCriteria 查询条件为员工姓名以及员工编号
      * @return
      */
     @GetMapping("")
@@ -36,7 +37,8 @@ public class EmployeeController extends BaseController {
 
     /**
      * 员工信息 根据id进行搜索
-     * @param id
+     *
+     * @param id 员工id
      * @return
      */
     @GetMapping("/{id}")
@@ -46,6 +48,7 @@ public class EmployeeController extends BaseController {
 
     /**
      * 员工信息 新增一条员工信息
+     *
      * @param employee
      * @return
      */
@@ -57,6 +60,7 @@ public class EmployeeController extends BaseController {
 
     /**
      * 员工信息 验证员工编号是否已经重复 返回布尔值 fales为未重复 true为已重复
+     *
      * @param employeeCode
      * @return
      */
@@ -67,6 +71,7 @@ public class EmployeeController extends BaseController {
 
     /**
      * 员工信息 删除多个员工信息
+     *
      * @param ids
      * @return
      */
@@ -77,6 +82,7 @@ public class EmployeeController extends BaseController {
 
     /**
      * 员工信息 更新员工信息
+     *
      * @param employee
      * @return
      */

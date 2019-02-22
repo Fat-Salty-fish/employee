@@ -13,4 +13,5 @@ import java.util.List;
  */
 public interface ExamineBaseRepository extends CrudRepository<ExamineBase,Integer> {
     List<ExamineBase> findByExamineBaseIdIn(Collection<Integer> ids);
+    List<ExamineBase> findByExamineNameLike(String examineName);
 }

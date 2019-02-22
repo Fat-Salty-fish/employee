@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @Description
+ * @Description 分析项目controller 响应与分析项目有关的操作
  * @auther 李忠杰
  * @create 2019-02-15 17:18
  */
@@ -21,6 +21,12 @@ public class AnalysisProjectController extends BaseController {
     @Autowired
     private AnalysisProjectService analysisProjectService;
 
+    /**
+     * 对分析项目进行分页查询和模糊检索
+     *
+     * @param analysisProjectCriteria 检索条件为 分析项目名 以及分析项目的样品类型
+     * @return
+     */
     @GetMapping("")
     public Object findByPage(AnalysisProjectCriteria analysisProjectCriteria) {
         PageBean pageBean = this.getPageBean();
