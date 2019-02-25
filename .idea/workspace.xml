@@ -2,32 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00b01df1-2a6e-4aee-ad02-09c1f0ca05f5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/parameter/CertificateParameter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/parameter/EmployeeScoreIdAndCertificateCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/repository/CertificateRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/result/ResultBean1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/controller/AnalysisProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/controller/AnalysisProjectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/controller/ExamineBaseInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/controller/ExamineBaseInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/controller/ExamineDetailInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/controller/ExamineDetailInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/controller/ExceptionHandlerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/controller/ExceptionHandlerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/controller/ScoreAndCertificateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/controller/ScoreAndCertificateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/criteria/AnalysisProjectCriteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/criteria/AnalysisProjectCriteria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/criteria/ExamineBaseCriteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/criteria/ExamineBaseCriteria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/criteria/ScoreAndCertificateCriteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/criteria/ScoreAndCertificateCriteria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/entity/Certificate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/entity/Certificate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/entity/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/entity/ExamineDetailEmployeeAndScoreInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/entity/ExamineDetailEmployeeAndScoreInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/repository/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/repository/EmployeeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/repository/ExamineBaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/repository/ExamineBaseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/repository/ExamineDetailEmployeeAndScoreInfoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/repository/ExamineDetailEmployeeAndScoreInfoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/service/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/service/ExamineDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/service/ExamineDetailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/service/ScoreAndCertificateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/service/ScoreAndCertificateService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/repository/AnalysisProjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/repository/AnalysisProjectRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/result/ResultBean1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/result/ResultBean1.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -42,8 +19,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sinoyd/demo/result/ResultBean1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="603">
-              <caret line="50" column="6" lean-forward="true" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
+            <state relative-caret-position="365">
+              <caret line="27" column="53" lean-forward="true" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -51,11 +28,20 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sinoyd/demo/repository/AnalysisProjectRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sinoyd/demo/criteria/AnalysisProjectCriteria.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
-              <caret line="21" column="17" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+            <state relative-caret-position="540">
+              <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -63,8 +49,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sinoyd/demo/criteria/EmployeeCriteria.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+            <state relative-caret-position="390">
+              <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -73,16 +59,16 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sinoyd/demo/criteria/ExamineBaseCriteria.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1800">
-              <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+              <caret line="70" selection-start-line="70" selection-end-line="70" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sinoyd/demo/controller/ExamineBaseInfoController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="32" column="14" lean-forward="true" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+            <state relative-caret-position="150">
+              <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -91,7 +77,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sinoyd/demo/result/ResultBean.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="420">
-              <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+              <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -163,14 +149,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/criteria/ExamineBaseCriteria.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/criteria/ScoreAndCertificateCriteria.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/repository/CertificateRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/repository/AnalysisProjectRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/repository/EmployeeRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/controller/ScoreAndCertificateController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/result/ResultBean1.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/service/EmployeeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/entity/Employee.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/service/ScoreAndCertificateService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/controller/ExamineBaseInfoController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/result/ResultBean1.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sinoyd/demo/repository/AnalysisProjectRepository.java" />
       </list>
     </option>
   </component>
@@ -195,6 +181,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -265,6 +252,16 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="employee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="employee" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="result" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -281,7 +278,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -293,7 +289,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550827480614" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550827828110" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -373,12 +369,13 @@
       <workItem from="1550622549288" duration="27744000" />
       <workItem from="1550667432552" duration="4648000" />
       <workItem from="1550709152827" duration="27797000" />
-      <workItem from="1550795838900" duration="24807000" />
+      <workItem from="1550795838900" duration="25406000" />
+      <workItem from="1551054866713" duration="2820000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="172959000" />
+    <option name="totallyTimeSpent" value="176378000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -393,7 +390,7 @@
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26285347" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26606685" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -403,7 +400,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993573" weight="0.3001346" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993573" visible="true" weight="0.2395693" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.50067294" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -482,13 +479,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sinoyd/demo/view.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sinoyd/demo/view.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/com/sinoyd/core/0.0.7-SNAPSHOT/core-0.0.7-20180531.065008-3.jar!/com/sinoyd/frame/base/repository/impl/CommonRepositoryImpl.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
@@ -639,13 +630,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sinoyd/demo/repository/AnalysisProjectRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sinoyd/demo/repository/CertificateRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -781,48 +765,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sinoyd/demo/result/ResultBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sinoyd/demo/result/ResultBean1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="50" column="6" lean-forward="true" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sinoyd/demo/criteria/AnalysisProjectCriteria.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="21" column="17" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+        <state relative-caret-position="540">
+          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sinoyd/demo/criteria/EmployeeCriteria.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+        <state relative-caret-position="390">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sinoyd/demo/criteria/ExamineBaseCriteria.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1800">
-          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sinoyd/demo/result/ResultBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sinoyd/demo/controller/ExamineBaseInfoController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="32" column="14" lean-forward="true" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+        <state relative-caret-position="150">
+          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sinoyd/demo/result/ResultBean1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="27" column="53" lean-forward="true" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sinoyd/demo/repository/AnalysisProjectRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
         </state>
       </provider>
     </entry>

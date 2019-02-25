@@ -1,6 +1,7 @@
 package com.sinoyd.demo.repository;
 
 import com.sinoyd.demo.entity.AnalysisProject;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.Collection;
